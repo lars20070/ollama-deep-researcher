@@ -26,6 +26,7 @@
     "dotenv",
     "Nilse",
     "virtualenv",
+    "env",
     "tavily",
   ],
   "cSpell.languageSettings": [
