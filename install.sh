@@ -22,4 +22,9 @@ echo "$TAVILY_API_KEY"
 # Installs 'langgraph-cli' package with 'inmem' extra
 # Runs 'dev' command from the 'langgraph-cli' package which starts the LangGraph server
 uvx --refresh --from "langgraph-cli[inmem]" --with-editable . --python 3.11 langgraph dev
+# Local LangGraph server
+# http://127.0.0.1:2024
+# http://127.0.0.1:2024/docs
+# Note open the link below in Chrome and not Safari
+# https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
 deactivate
