@@ -19,4 +19,7 @@ fi
 . ./.venv/bin/activate
 uvx --version
 echo "$TAVILY_API_KEY"
+# Installs 'langgraph-cli' package with 'inmem' extra
+# Runs 'dev' command from the 'langgraph-cli' package which starts the LangGraph server
+uvx --refresh --from "langgraph-cli[inmem]" --with-editable . --python 3.11 langgraph dev
 deactivate
