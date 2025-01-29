@@ -29,6 +29,7 @@
     "env",
     "tavily",
     "inmem",
+    "pycache",
   ],
   "cSpell.languageSettings": [
     {

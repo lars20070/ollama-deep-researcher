@@ -1,2 +1,4 @@
 .venv/
 .env
+__pycache__/
+ollama_deep_researcher.egg-info/
