@@ -30,4 +30,6 @@ uvx --refresh --from "langgraph-cli[inmem]" --with-editable . --python 3.11 lang
 # (handles graph visualization, config settings, execution monitoring, results display)
 # Note open the link below in Chrome and not Safari
 # https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
+# Alternatively, install the LangGraph Studio desktop app, start the app and open this project directory.
+# https://studio.langchain.com
 deactivate
