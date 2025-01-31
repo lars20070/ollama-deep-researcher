@@ -57,6 +57,8 @@ def generate_query(state: SummaryState, config: RunnableConfig):
 def web_research(state: SummaryState, config: RunnableConfig):
     """Gather information from the web"""
 
+    logger.info(f"Web research with search query: {state.search_query}")
+
     # Configure
     configurable = Configuration.from_runnable_config(config)
 
