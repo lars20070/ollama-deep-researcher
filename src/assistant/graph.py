@@ -34,17 +34,21 @@ def generate_query(state: SummaryState, config: RunnableConfig):
         research_topic=state.research_topic
     )
 
+    logger.info(f"Formatted prompt: {query_writer_instructions_formatted}")
+
     # Generate a query
     configurable = Configuration.from_runnable_config(config)
     llm_json_mode = ChatOllama(
         model=configurable.local_llm, temperature=0, format="json"
     )
+    logger.info("LLM model created.")
     result = llm_json_mode.invoke(
         [
             SystemMessage(content=query_writer_instructions_formatted),
             HumanMessage(content=f"Generate a query for web search:"),
         ]
     )
+    logger.info(f"LLM response: {result.content}")
     query = json.loads(result.content)
 
     return {"search_query": query["query"]}
