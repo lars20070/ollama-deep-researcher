@@ -49,4 +49,10 @@
   "shellcheck.ignorePatterns": {
     "**/.env-example": true,
   },
+  "logViewer.watch": [
+    {
+      "title": "assistant",
+      "pattern": "assistant.log"
+    },
+  ]
 }

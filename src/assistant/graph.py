@@ -27,7 +27,7 @@ from assistant.logger import logger
 def generate_query(state: SummaryState, config: RunnableConfig):
     """Generate a query for web search"""
 
-    logger.info("Generating query.")
+    logger.info(f"Generating query for the research topic: {state.research_topic}")
 
     # Format the prompt
     query_writer_instructions_formatted = query_writer_instructions.format(
