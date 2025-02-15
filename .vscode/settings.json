@@ -8,7 +8,8 @@
   "python.testing.pytestArgs": [],
   "autoDocstring.docstringFormat": "google",
   "[python]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "charliermarsh.ruff",
   },
   "github.copilot.enable": {
     "*": true,
@@ -36,6 +37,11 @@
     "tavily",
     "inmem",
     "pycache",
+    "pydocstyle",
+    "isort",
+    "pyflakes",
+    "pycodestyle",
+    "mypy",
   ],
   "cSpell.languageSettings": [
     {

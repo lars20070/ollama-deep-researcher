@@ -7,7 +7,7 @@ from langchain_core.runnables import RunnableConfig
 from langchain_ollama import ChatOllama
 from langgraph.graph import START, END, StateGraph
 
-from assistant.configuration import Configuration, SearchAPI
+from assistant.configuration import Configuration
 from assistant.utils import (
     deduplicate_and_format_sources,
     tavily_search,
@@ -166,7 +166,6 @@ def reflect_on_summary(state: SummaryState, config: RunnableConfig):
 
     # JSON mode can fail in some cases
     if not query:
-
         # Fallback to a placeholder query
         return {"search_query": f"Tell me more about {state.research_topic}"}
 
