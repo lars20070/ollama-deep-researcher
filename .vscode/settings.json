@@ -11,7 +11,13 @@
     "editor.tabSize": 4
   },
   "github.copilot.enable": {
-    "*": false
+    "*": true,
+    "bash": true,
+    "yaml": true,
+    "toml": true,
+    "python": true,
+    "markdown": true,
+    "plaintext": false,
   },
   "r.lsp.promptToInstall": false,
   "cSpell.enabled": true,
