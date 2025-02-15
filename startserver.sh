@@ -1,11 +1,10 @@
 #!/bin/sh
 
-# # Install dependencies
+# # Create a virtual environment
 # virtualenv -p python3 ./.venv
 # # shellcheck source=/dev/null
 # . ./.venv/bin/activate
 # pip install --upgrade pip
-# pip list
 # deactivate
 
 # Load environment variables from .env file
@@ -14,11 +13,10 @@ if [ -f .env ]; then
   . .env
 fi
 
-# Run the script
-# shellcheck source=/dev/null
-. ./.venv/bin/activate
-uvx --version
 echo "$TAVILY_API_KEY"
+
+# Start the LangGraph server
+uvx --version
 # Installs 'langgraph-cli' package with 'inmem' extra
 # Runs 'dev' command from the 'langgraph-cli' package which starts the LangGraph server
 uvx --refresh --from "langgraph-cli[inmem]" --with-editable . --python 3.11 langgraph dev
@@ -32,4 +30,3 @@ uvx --refresh --from "langgraph-cli[inmem]" --with-editable . --python 3.11 lang
 # https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
 # Alternatively, install the LangGraph Studio desktop app, start the app and open this project directory.
 # https://studio.langchain.com
-deactivate
